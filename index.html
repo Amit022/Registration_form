@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
+    </head>
+    <body>
+        <form onsubmit="event.preventDefault(); onFormSubmit()" id="login-form" name="login-form">
+            <h1>Employee Registration Form</h1>
+           <div>
+               <label for="name">Name</label><br></br>
+               <input type="text"  autoComplete="off" id="name" placeholder="Enter Your name" required></input>
+           </div>
+           <div>
+               <label for="email">Email</label> <br></br>
+               <input type="email" autoComplete="off" id="email" required placeholder="Enter Your EmailId"></input>
+           </div>
+           <div>
+              <label for="empno">Employee No</label><br></br>
+              <input type="text" pattern="\d{10}" id="empno" maxLength="10" 
+              required />
+           </div>
+           <div>
+               <label for="country">Choose Country</label><br></br>
+               <select name="country" type="countrySel">
+               <option value="" selected="selected">Please Choose Country </option>
+               </select>
+           </div>
+
+           <div>
+               <label for="state">Choose State</label><br></br>
+               <select name="state" type="stateSel">
+               <option value="" selected="selected">Please Choose State </option>
+               </select>
+           </div>
+           <div>
+               <label for="city">Choose City</label><br></br>
+               <select name="city" type="citySel">
+               <option value="" selected="selected">Please Choose City </option>
+               </select>
+           </div>
+
+           
+           <input type="submit" value="Submit" /*onclick="onFormSubmit(event)"*/ />
+        </form>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
